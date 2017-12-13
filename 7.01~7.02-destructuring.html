@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>01/02 - Destructuring  </title>
+    <meta charset="utf-8" />
+</head>
+
+<body>
+</body>
+
+<script>
+  var data = {
+    name: 'Karoline',
+    surname: 'Lemos',
+    age: 23,
+    blog: 'http://xxx.com',
+    social: {
+      twitter: '@xxx',
+      facebook: '/xxx'
+    }
+  };
+
+  const { name, surname } = data;
+  console.log(name);
+  console.log(surname);
+
+  const { facebook, twitter } = data.social;
+  console.log(facebook);
+  console.log(twitter);
+
+  const { facebook: fb } = data.social;
+  console.log(fb);
+
+  const { city = 'Joinville' } = data;
+  console.log(city);
+
+
+  const arr = ['Karoline', 'Lemos', 23, 'Joinville'];
+  const [ arrName, arrSurname, arrAge, arrCity ] = arr;
+  console.log(arrName);
+</script>
+</html>
